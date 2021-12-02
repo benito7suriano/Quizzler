@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var choice1Button: UIButton!
     @IBOutlet weak var choice2Button: UIButton!
@@ -28,9 +28,9 @@ class ViewController: UIViewController {
     // objc func so that we can use it inside a Timer() as selector
     @objc func updateUI() {
         
-        questionLabel.text = quizBrain.getQuestionText()
+        questionNumberLabel.text = quizBrain.getQuestionText()
         progressBar.progress = quizBrain.getProgress()
-        scoreLabel.text = "Score: \(quizBrain.getScore())"
+        questionNumberLabel.text = "Question \(quizBrain.getQuestionNumber())"
         
         choice1Button.setTitle(quizBrain.getButtonText(order: 0), for: .normal)
         choice2Button.setTitle(quizBrain.getButtonText(order: 1), for: .normal)

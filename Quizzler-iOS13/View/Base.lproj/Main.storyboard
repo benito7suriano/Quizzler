@@ -109,8 +109,8 @@
                         <outlet property="choice2Button" destination="tbn-vQ-GyC" id="2Sb-Q5-aXw"/>
                         <outlet property="choice3Button" destination="lRt-zl-xxS" id="Rzh-C7-5cP"/>
                         <outlet property="progressBar" destination="TXm-qh-7Xg" id="KZS-Vb-PZM"/>
-                        <outlet property="questionLabel" destination="rSI-li-mhO" id="7JT-eM-3HY"/>
-                        <outlet property="scoreLabel" destination="8Ee-rA-cua" id="gnF-pq-39M"/>
+                        <outlet property="questionLabel" destination="rSI-li-mhO" id="NBy-gO-6Tc"/>
+                        <outlet property="questionNumberLabel" destination="8Ee-rA-cua" id="gnF-pq-39M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

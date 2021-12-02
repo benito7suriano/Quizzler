@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0aa-ge-qFP">
+                            <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" axis="vertical" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0aa-ge-qFP">
                                 <rect key="frame" x="20" y="0.0" width="374" height="736"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ee-rA-cua" userLabel="Score">
@@ -95,13 +95,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.14509803921568626" green="0.17254901960784313" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="0aa-ge-qFP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8m7-Qs-Jpg"/>
-                            <constraint firstItem="eGL-jB-Wwb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BRt-CY-8gJ"/>
-                            <constraint firstItem="eGL-jB-Wwb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LSZ-vt-efr"/>
-                            <constraint firstItem="0aa-ge-qFP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NxT-0R-9fy"/>
-                            <constraint firstAttribute="bottom" secondItem="eGL-jB-Wwb" secondAttribute="bottom" id="QaM-0L-YGG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0aa-ge-qFP" secondAttribute="bottom" id="cnn-va-QCD"/>
-                            <constraint firstItem="0aa-ge-qFP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lGz-8B-1Gg"/>
+                            <constraint firstItem="eGL-jB-Wwb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6mz-tu-fft"/>
+                            <constraint firstItem="0aa-ge-qFP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Fzz-fC-JGt"/>
+                            <constraint firstItem="0aa-ge-qFP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GEf-q0-Eef"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eGL-jB-Wwb" secondAttribute="trailing" id="Vf2-eH-dqm"/>
+                            <constraint firstItem="0aa-ge-qFP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dxg-eq-xaH"/>
+                            <constraint firstItem="eGL-jB-Wwb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fjb-X1-p1s"/>
+                            <constraint firstItem="0aa-ge-qFP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uhh-cO-3c9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -115,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.23188405797103" y="135.26785714285714"/>
+            <point key="canvasLocation" x="136.23188405797103" y="134.5108695652174"/>
         </scene>
     </scenes>
     <resources>

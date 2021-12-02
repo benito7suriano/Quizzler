@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     
     var quizBrain = QuizBrain()
     
+    // objc func so that we can use it inside a Timer() as selector
     @objc func updateUI() {
         
         questionLabel.text = quizBrain.getQuestionText()

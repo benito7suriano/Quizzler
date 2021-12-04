@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class QuizViewController: UIViewController {
     
     @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     // objc func so that we can use it inside a Timer() as selector
     @objc func updateUI() {
         
-        questionNumberLabel.text = quizBrain.getQuestionText()
+        questionLabel.text = quizBrain.getQuestionText()
         progressBar.progress = quizBrain.getProgress()
         questionNumberLabel.text = "Question \(quizBrain.getQuestionNumber())"
         

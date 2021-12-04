@@ -32,7 +32,6 @@ struct QuizBrain {
         } else {
             return false
         }
-    
     }
     
     func getQuestionText () -> String {

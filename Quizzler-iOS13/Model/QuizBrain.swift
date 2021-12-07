@@ -23,11 +23,18 @@ struct QuizBrain {
     ]
     
     var currentQuestion = 0
-    var score = 0
+    var correctAnswers = 0
+    var userIsDoneTakingQuiz = false
+    
+    var quizScore: String {
+        let score = Double(correctAnswers) / Double(quiz.count) * 100
+    
+        return String(format: "%.2f", score)
+    }
     
     mutating func checkAnswer (_ userAnswer: String) -> Bool {
         if userAnswer == quiz[currentQuestion].answer {
-            score += 1
+            correctAnswers += 1
             return true
         } else {
             return false
@@ -51,11 +58,10 @@ struct QuizBrain {
     }
     
     mutating func nextQuestion() {
-        if currentQuestion < quiz.count-1 {
+        if currentQuestion < quiz.count - 1 {
             currentQuestion += 1
-        } else if currentQuestion == quiz.count-1 {
-            currentQuestion = 0
-            score = 0
+        } else if currentQuestion == quiz.count - 1 {
+            userIsDoneTakingQuiz = !userIsDoneTakingQuiz
         }
     }
 }

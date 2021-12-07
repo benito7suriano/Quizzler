@@ -54,9 +54,25 @@ class QuizViewController: UIViewController {
             sender.backgroundColor = UIColor.red
         }
         
+        Timer.scheduledTimer(timeInterval: 0.25, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        
         quizBrain.nextQuestion()
         
-        Timer.scheduledTimer(timeInterval: 0.25, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        if quizBrain.userIsDoneTakingQuiz {
+            self.performSegue(withIdentifier: "goToResult", sender: self)
+        }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "goToResult" {
+            let destinationVC = segue.destination as! ResultsViewController
+            
+                destinationVC.score = quizBrain.quizScore
+        }
+        
+    }
+    
 }
 

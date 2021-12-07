@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" axis="vertical" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0aa-ge-qFP">
                                 <rect key="frame" x="20" y="0.0" width="374" height="736"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ee-rA-cua" userLabel="Score">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ee-rA-cua" userLabel="Question Number">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="69.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,22 +112,23 @@
                         <outlet property="progressBar" destination="TXm-qh-7Xg" id="KZS-Vb-PZM"/>
                         <outlet property="questionLabel" destination="rSI-li-mhO" id="NBy-gO-6Tc"/>
                         <outlet property="questionNumberLabel" destination="8Ee-rA-cua" id="gnF-pq-39M"/>
+                        <segue destination="Lke-Re-Sad" kind="presentation" identifier="goToResult" id="nB7-sZ-PgL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.23188405797103" y="134.5108695652174"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="9I1-Of-w9Y">
             <objects>
-                <viewController id="Lke-Re-Sad" sceneMemberID="viewController">
+                <viewController id="Lke-Re-Sad" customClass="ResultsViewController" customModule="Quizzler_iOS13" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T6E-tw-j0i">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="HU5-wP-YVw">
-                                <rect key="frame" x="0.0" y="256.66666666666669" width="414" height="222.66666666666669"/>
+                                <rect key="frame" x="0.0" y="246.66666666666669" width="414" height="222.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You scored" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZf-5g-htv">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
@@ -138,7 +140,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcF-z0-JoE">
-                                        <rect key="frame" x="0.0" y="87" width="414" height="78"/>
+                                        <rect key="frame" x="0.0" y="87.000000000000028" width="414" height="78"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="78" id="a2V-FC-yNo"/>
                                         </constraints>
@@ -147,23 +149,46 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="really dude... freaking overachiever" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJy-9e-HaI">
-                                        <rect key="frame" x="0.0" y="194" width="414" height="28.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="194.00000000000003" width="414" height="28.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhp-wr-ypa">
+                                <rect key="frame" x="162" y="547.33333333333337" width="90" height="90"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="NNQ-0t-WdG"/>
+                                    <constraint firstAttribute="height" constant="90" id="ltm-LY-bag"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Restart"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tRl-EU-SGm"/>
                         <color key="backgroundColor" red="0.1450980392" green="0.17254901959999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="HU5-wP-YVw" firstAttribute="centerY" secondItem="T6E-tw-j0i" secondAttribute="centerY" id="3hH-Xl-iHU"/>
                             <constraint firstItem="HU5-wP-YVw" firstAttribute="leading" secondItem="tRl-EU-SGm" secondAttribute="leading" id="BDM-y8-lKd"/>
+                            <constraint firstItem="Hhp-wr-ypa" firstAttribute="centerX" secondItem="T6E-tw-j0i" secondAttribute="centerX" id="V1O-sC-qUs"/>
                             <constraint firstItem="HU5-wP-YVw" firstAttribute="centerX" secondItem="T6E-tw-j0i" secondAttribute="centerX" id="Y5g-NR-AhT"/>
+                            <constraint firstItem="Hhp-wr-ypa" firstAttribute="top" secondItem="HU5-wP-YVw" secondAttribute="bottom" constant="78" id="c7Q-SB-aVd"/>
                             <constraint firstItem="tRl-EU-SGm" firstAttribute="trailing" secondItem="HU5-wP-YVw" secondAttribute="trailing" id="cqR-Vv-ft8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="LcF-z0-JoE" id="Ry0-Nc-P00"/>
+                        <outlet property="slyCommentLabel" destination="mJy-9e-HaI" id="sfK-od-4rd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXT-Ud-Esu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,5 +198,8 @@
     <resources>
         <image name="Background-Bubbles" width="352" height="102"/>
         <image name="Rectangle" width="322" height="68"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

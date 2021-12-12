@@ -47,7 +47,7 @@ class QuizViewController: UIViewController {
         let answer = quizBrain.checkAnswer(userAnswer)
         
         if answer {
-            print("Correct!!!")
+            print("Correct!!! Current score: \(quizBrain.quizScore)")
             sender.backgroundColor = UIColor.green
         } else {
             print("Wrong!!!")
@@ -64,15 +64,13 @@ class QuizViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+
         if segue.identifier == "goToResult" {
-            let destinationVC = segue.destination as! ResultsViewController
+                // Get the new view controller using segue.destination.
+                let destinationVC = segue.destination as! ResultsViewController
             
+                // Pass the selected object to the new view controller.
                 destinationVC.score = quizBrain.quizScore
         }
-        
     }
-    
 }
-

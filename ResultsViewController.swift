@@ -19,9 +19,9 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("the final score is: \(score)")
+        
         // Do any additional setup after loading the view.
-        scoreLabel.text = score
+        scoreLabel.text = score!
     }
-    
-    
 }

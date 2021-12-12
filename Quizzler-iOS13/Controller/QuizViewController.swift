@@ -60,6 +60,8 @@ class QuizViewController: UIViewController {
         
         if quizBrain.userIsDoneTakingQuiz {
             self.performSegue(withIdentifier: "goToResult", sender: self)
+            
+            quizBrain.clearQuiz()
         }
     }
     

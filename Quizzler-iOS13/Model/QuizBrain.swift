@@ -86,7 +86,12 @@ struct QuizBrain {
             currentQuestion += 1
         } else if currentQuestion == quiz.count - 1 {
             userIsDoneTakingQuiz = !userIsDoneTakingQuiz
-            currentQuestion = 0
         }
+    }
+    
+    mutating func clearQuiz() {
+        correctAnswers = 0
+        currentQuestion = 0
+        userIsDoneTakingQuiz = false
     }
 }

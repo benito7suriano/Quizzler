@@ -179,6 +179,14 @@
                                     <action selector="retakeQuizButtonPressed:" destination="Lke-Re-Sad" eventType="touchUpInside" id="2Go-no-KkO"/>
                                 </connections>
                             </button>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gs-BU-Efw" customClass="ConfettiView" customModule="ConfettiView">
+                                <rect key="frame" x="0.0" y="-9.6666666666666856" width="414" height="735.33333333333348"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="735" id="CBT-U1-M7p"/>
+                                    <constraint firstAttribute="width" constant="414" id="CWR-Pg-Zvm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tRl-EU-SGm"/>
                         <color key="backgroundColor" red="0.1450980392" green="0.17254901959999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
@@ -189,9 +197,12 @@
                             <constraint firstItem="HU5-wP-YVw" firstAttribute="centerX" secondItem="T6E-tw-j0i" secondAttribute="centerX" id="Y5g-NR-AhT"/>
                             <constraint firstItem="Hhp-wr-ypa" firstAttribute="top" secondItem="HU5-wP-YVw" secondAttribute="bottom" constant="78" id="c7Q-SB-aVd"/>
                             <constraint firstItem="tRl-EU-SGm" firstAttribute="trailing" secondItem="HU5-wP-YVw" secondAttribute="trailing" id="cqR-Vv-ft8"/>
+                            <constraint firstItem="4gs-BU-Efw" firstAttribute="centerY" secondItem="T6E-tw-j0i" secondAttribute="centerY" id="f6U-H2-rfw"/>
+                            <constraint firstItem="4gs-BU-Efw" firstAttribute="centerX" secondItem="T6E-tw-j0i" secondAttribute="centerX" id="ifo-So-0gb"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confetti" destination="4gs-BU-Efw" id="rne-tz-cw1"/>
                         <outlet property="scoreLabel" destination="LcF-z0-JoE" id="Ry0-Nc-P00"/>
                         <outlet property="slyCommentLabel" destination="mJy-9e-HaI" id="sfK-od-4rd"/>
                     </connections>

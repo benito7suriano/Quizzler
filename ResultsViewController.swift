@@ -19,9 +19,12 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("the final score is: \(score)")
-        
         // Do any additional setup after loading the view.
-        scoreLabel.text = score!
+        scoreLabel.text = score ?? "Oops... "
+        slyCommentLabel.text = slyComment ?? "You win, we lose!"
+    }
+    
+    @IBAction func retakeQuizButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
 }

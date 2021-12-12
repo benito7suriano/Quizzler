@@ -71,6 +71,7 @@ class QuizViewController: UIViewController {
             
                 // Pass the selected object to the new view controller.
                 destinationVC.score = quizBrain.quizScore
+                destinationVC.slyComment = quizBrain.slyComment
         }
     }
 }

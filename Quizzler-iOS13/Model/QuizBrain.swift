@@ -39,11 +39,11 @@ struct QuizBrain {
             case 0.0:
                 return "don't know what to say..."
             case 0.1..<49.9:
-                return "faaaail"
+                return "faaaail... have you considered becoming an HTML dev instead?"
             case 50.0..<74.9:
-                return "C's get degrees"
+                return "C's get degrees, hahaha"
             case 74.9..<89.9:
-                return "Way to go!"
+                return "Way to go, bro!"
             default:
                 return "really dude?!? Freaking overachiever"
             }

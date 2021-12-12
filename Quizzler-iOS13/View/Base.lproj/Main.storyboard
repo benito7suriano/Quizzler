@@ -175,6 +175,9 @@
                                         <integer key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="retakeQuizButtonPressed:" destination="Lke-Re-Sad" eventType="touchUpInside" id="2Go-no-KkO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tRl-EU-SGm"/>

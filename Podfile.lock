@@ -1,0 +1,16 @@
+PODS:
+  - ConfettiView-NSHipster (0.3.1)
+
+DEPENDENCIES:
+  - ConfettiView-NSHipster
+
+SPEC REPOS:
+  trunk:
+    - ConfettiView-NSHipster
+
+SPEC CHECKSUMS:
+  ConfettiView-NSHipster: dd3f241dc342250ee37e0fc07e6d1adb6695eb0b
+
+PODFILE CHECKSUM: baa1e11eeecb6a8aab52ec68fa340bc1c31eff39
+
+COCOAPODS: 1.11.2
